@@ -1,0 +1,21 @@
+# 2D- Array--------->
+
+import sys
+from datetime import datetime
+
+init=datetime.now()
+sys.stdout = open('s:/Check/CP1/output.txt','w')
+sys.stdin = open('s:/Check/CP1/input.txt','r')
+
+a=[]
+for i in range(3):
+    row_list=list(map(int,input().split()))
+    for j in range(i+1):
+        a.append(row_list)
+print(a)
+for i in range(3):
+    for j in range(3):
+        print(a[i][j],end=" ")
+    print()
+final=datetime.now()
+print('Execution Time : ',format(final-init))
